@@ -1,21 +1,81 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>Biomistry Lab</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biomistry Lab // Nikormat FS</title>
     <style>
-        body { font-family: sans-serif; background: #0f172a; color: #f8fafc; padding: 50px; text-align: center; }
-        .box { border: 1px solid #334155; padding: 20px; border-radius: 8px; display: inline-block; }
-        h1 { color: #2ecc71; } /* 理科实验感色彩 */
-    </style>
-</head>
-<body>
-    <div class="box">
-        <h1>Biomistry.eu.org</h1>
-        <p>这里是数字实验室，正在筹备理化笔记与代码工程...</p>
-        <nav>
-            <a href="https://github.com/RedK-Cat" style="color: #38bdf8;">GitHub Project</a>
-        </nav>
-    </div>
-</body>
-</html>
+        /* 复古相机美学 CSS 定义 */
+        :root {
+            --camera-black: #121212; /* 黑色机身皮纹 */
+            --chrome: #c0c0c0; /* 银色机身/镜头环 */
+            --dial-red: #d32f2f; /* ISO/ASA 刻度红 */
+            --glass: #263238; /* 镜头镜片深蓝黑 */
+            --text-main: #e0e0e0;
+            --text-muted: #888;
+            --font-serif: 'Georgia', serif;
+            --font-mono: 'JetBrains Mono', 'Courier New', monospace; /* 机械刻度感字体 */
+        }
+
+        body {
+            background-color: var(--camera-black);
+            color: var(--text-main);
+            font-family: var(--font-mono);
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow-x: hidden;
+            background-image: 
+                /* 模仿机身皮纹质感 */
+                radial-gradient(#1a1a1a 10%, transparent 11%),
+                radial-gradient(#1a1a1a 10%, transparent 11%);
+            background-size: 10px 10px;
+            background-position: 0 0, 5px 5px;
+        }
+
+        /* 模拟镜头光圈环/机身的主容器 */
+        .camera-body {
+            max-width: 650px;
+            width: 90%;
+            padding: 40px;
+            border: 4px solid #333; /* 粗重的机械边界 */
+            border-radius: 8px;
+            background: #000; /* 镜头阴影深处 */
+            box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+            position: relative;
+        }
+
+        /* 机身编号刻度感 */
+        .camera-serial {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 0.7rem;
+            color: #444;
+            letter-spacing: 1px;
+        }
+
+        header {
+            text-align: center;
+            border-bottom: 2px solid #222;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        /* NIKORMAT 风格的标题字体 */
+        h1 {
+            font-family: var(--font-serif);
+            font-weight: 900;
+            font-size: 2.8rem;
+            margin: 0;
+            letter-spacing: -1px;
+            text-transform: uppercase;
+            color: var(--chrome);
+            text-shadow: 0 0 10px rgba(192, 192, 192, 0.4);
+        }
+
+        .tagline {
+            font-size: 0.9rem;
+            color
