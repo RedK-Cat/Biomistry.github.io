@@ -1,0 +1,136 @@
+body {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+    font-family: 'Noto Serif SC', serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #f5f5f5;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #a0a0a0;
+    margin-bottom: 3rem;
+}
+
+.upload-area {
+    border: 2px dashed #444;
+    border-radius: 10px;
+    padding: 3rem;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.upload-area:hover {
+    background-color: #222;
+    border-color: #666;
+}
+
+.upload-area p {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.upload-link {
+    color: #8ab4f8;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.preview-container {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+canvas {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.controls {
+    display: flex;
+    justify-content: space-around;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.slider-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.slider-group label {
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+    color: #c0c0c0;
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 5px;
+    background: #444;
+    border-radius: 5px;
+    outline: none;
+    opacity: 0.7;
+    transition: opacity .2s;
+}
+
+input[type="range"]:hover {
+    opacity: 1;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #8ab4f8;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #8ab4f8;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#save-btn {
+    background-color: #8ab4f8;
+    color: #1a1a1a;
+    border: none;
+    border-radius: 8px;
+    padding: 1rem 2.5rem;
+    font-family: 'Noto Serif SC', serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#save-btn:hover {
+    background-color: #a8c7fa;
+    transform: translateY(-2px);
+}

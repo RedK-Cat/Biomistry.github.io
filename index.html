@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FilmVibe</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>FilmVibe</h1>
+            <p>上传你的照片，赋予它复古胶片的灵魂</p>
+        </header>
+
+        <main>
+            <div class="upload-area" id="upload-area">
+                <p>拖拽图片到这里，或 <span class="upload-link">点击上传</span></p>
+                <input type="file" id="file-input" accept="image/*" hidden>
+            </div>
+
+            <div class="preview-container" id="preview-container" style="display: none;">
+                <canvas id="canvas"></canvas>
+            </div>
+
+            <div class="controls" id="controls" style="display: none;">
+                <div class="slider-group">
+                    <label for="grain">颗粒感</label>
+                    <input type="range" id="grain" min="0" max="100" value="20">
+                </div>
+                <div class="slider-group">
+                    <label for="warmth">复古感</label>
+                    <input type="range" id="warmth" min="0" max="100" value="30">
+                </div>
+                <div class="slider-group">
+                    <label for="vignette">柔光感</label>
+                    <input type="range" id="vignette" min="0" max="100" value="40">
+                </div>
+            </div>
+
+            <button id="save-btn" style="display: none;">保存电影画幅</button>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
